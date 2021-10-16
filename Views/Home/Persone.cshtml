@@ -1,0 +1,40 @@
+﻿@* @model List<Persona> *@
+@{
+    ViewData["Title"] = "Persone";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>@DateTime.Now</h2>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table border="1">
+        <tbody>
+            <tr>
+                    <th>
+                        NOME
+                    </th>
+                    <th>
+                        COGNOME
+                    </th>
+                    <th>
+                        ID
+                    </th>
+                </tr>
+            @foreach (Persona p in Model)
+            {
+                <tr>
+                    <td>
+                        @p.Nome
+                    </td>
+                    <td>
+                        @p.Cognome
+                    </td>
+                    <td>
+                        @p.ID
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
